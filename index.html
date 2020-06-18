@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
 
     <title>Casa Criativa</title>
 </head>
@@ -39,7 +40,7 @@
             </main>
 
             <section id="buttons">
-                <button>Adicionar ideias</button>
+                <button onclick="onOff()">Adicionar ideias</button>
                 <button class="fat">Ver ideias</button>
             </section>
 
@@ -47,7 +48,7 @@
 
 
             <footer>
-                <a href="https://www.linkedin.com/in/juanpablodev/">Com ❤ By Juan Pablo</a> 
+                <a href="https://www.linkedin.com/in/juanpablodev/">Com ❤ By Juan Pablo</a>
             </footer>
 
 
@@ -55,45 +56,45 @@
 
         <section id="last-ideias">
             <div class="idea">
-                <img 
-                src="https://image.flaticon.com/icons/svg/3029/3029739.svg" 
-                alt="Imagem de curso de programação">
+                <img src="https://image.flaticon.com/icons/svg/3029/3029739.svg" alt="Imagem de curso de programação">
 
                 <div class="content">
                     <h3>Cursos de Progrmação</h3>
                     <p>Estudo</p>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut error. Voluptas, temporibus quo.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad
+                        delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut
+                        error. Voluptas, temporibus quo.
                         <a href="#">Ir a ideia</a>
                     </div>
                 </div>
             </div>
 
             <div class="idea">
-                <img 
-                src="https://image.flaticon.com/icons/svg/3028/3028323.svg" 
-                alt="Imagem de Exercícios">
+                <img src="https://image.flaticon.com/icons/svg/3028/3028323.svg" alt="Imagem de Exercícios">
 
                 <div class="content">
                     <h3>Exercícios</h3>
                     <p>Saúde</p>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut error. Voluptas, temporibus quo.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad
+                        delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut
+                        error. Voluptas, temporibus quo.
                         <a href="#">Ir a ideia</a>
                     </div>
                 </div>
             </div>
 
             <div class="idea">
-                <img 
-                src="https://image.flaticon.com/icons/svg/3028/3028386.svg" 
-                alt="Imagem de Meditação">
+                <img src="https://image.flaticon.com/icons/svg/3028/3028386.svg" alt="Imagem de Meditação">
 
                 <div class="content">
                     <h3>Meditação</h3>
                     <p>Mentalidade</p>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut error. Voluptas, temporibus quo.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, voluptatum quos placeat ad
+                        delectus harum ipsam vel fugiat debitis? Officiis sit, accusamus dolorem odit necessitatibus aut
+                        error. Voluptas, temporibus quo.
                         <a href="#">Ir a ideia</a>
                     </div>
                 </div>
@@ -101,6 +102,52 @@
         </section>
     </div>
 
+
+    <!--Modal-->
+    <div id="modal" class="hide">
+        <div class="content">
+            <h1>Nova ideia</h1>
+
+            <form action="">
+
+                <div class="input-wrapper">
+                    <label for="title">Título da ideia</label>
+                    <input type="text" name="title" id="title">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category" id="title">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="image">Link da imagem</label>
+                    <input type="url" name="image" id="title">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="description">Digite uma descrição para essa ideia</label>
+                    <textarea name="description" cols="30" rows="10"> </textarea>
+
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="link">Link da ideia</label>
+                    <input type="url" name="link">
+
+                </div>
+
+                <a href="#" onclick="onOff()">Voltar</a>
+                <button>Salvar</button>
+
+
+
+
+
+
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
