@@ -138,7 +138,7 @@ footer a {
 }
 
 .idea .description {
-    margin: 16px 0;
+    margin: 14px 0;
 }
 
 
@@ -146,32 +146,35 @@ footer a {
 /* Modal */
 
 #modal {
-    background: #ff5e84;
+    background: #FF5E84;
 
-    position: absolute;
+    position: fixed;
+
     top: 0;
-
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
     justify-content: center;
 
-    transition: 500ms;
+    transition: 400ms;
 
 }
 
+
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 5%;
 
     color: white;
-
 }
 
 #modal .content h1 {
     text-align: center;
-
     text-transform: uppercase;
+    margin-top: -50px;
+
 }
 
 #modal form {
@@ -182,6 +185,7 @@ footer a {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     gap: 20px;
 
 }
@@ -192,8 +196,12 @@ footer a {
     grid-column: span 2;
 }
 
-form input,
-form textarea {
+.input-wrapper {
+    margin: -10px;
+}
+
+
+form input, form textarea {
     width: 100%;
 
     padding: 12px;
@@ -201,6 +209,7 @@ form textarea {
     box-sizing: border-box;
 
     border-radius: 6px;
+
     border: 1px solid rgba(141, 25, 52, 0.5);
 
     outline: none;
@@ -211,13 +220,12 @@ form textarea {
 form label {
     font-weight: 600;
     line-height: 32px;
-    letter-spacing: 0.8;
+    letter-spacing: 0.2px;
 }
 
 form a {
     width: 150px;
     height: 40px;
-
     background-color: #ffffff22;
     color: white;
 
@@ -231,14 +239,12 @@ form a {
     border-radius: 6px;
 
     align-self: end;
-
     transition: 400ms;
 }
 
-form a:hover{
+form a:hover {
     background: #fff;
-    color: #ff5e84;
-
+    color: #FF5E84;
     text-decoration: none;
 }
 
@@ -255,22 +261,14 @@ form button {
     margin-top: 32px;
 
     grid-column: 2;
-
     justify-self: end;
 
     transition: 400ms;
 }
 
 form button:hover {
-    background-color: #0984c3;
+    
+    background-color: #0984e3;
     color: white;
-
     text-decoration: none;
-}
-
-#modal.hide {
-    opacity: 0;
-
-    visibility: hidden;
-
 }
