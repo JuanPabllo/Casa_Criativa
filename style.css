@@ -1,9 +1,16 @@
+/* global */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #e5e5e5;
     color: #25282b;
 
     margin: 0;
+}
+
+
+body.hideScroll {
+    overflow: hidden;
 }
 
 .hide {
@@ -40,50 +47,49 @@ p,
 #intro {
     width: 300px;
 
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main {
     margin: 32px 0;
 }
 
-button {
-    color: #ff5e84;
-    border: none;
 
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-
-    background: none;
-
-    cursor: pointer;
-
-    outline: none;
-}
-
-button:hover {
-    text-decoration: underline;
-}
-
-button.fat {
-    color: white;
+.button {
     background: #ff5e84;
+    color: white;
 
+    margin-right: 5px;
     width: 150px;
     height: 40px;
 
-    border-radius: 6px;
+    cursor: pointer;
 
-    box-shadow: 0px 8px 16px #ff5eb432;
+    border-radius: 8px;
 
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+    box-shadow: 8px 8px 16px #ff528432;
 
 }
 
-button.fat:hover {
+.button:hover {
+    background-color: #0984e3;
+
     text-decoration: none;
 }
+
+
+
+/* PADRAO */
+
 
 #buttons {
     display: flex;
@@ -162,6 +168,10 @@ footer a {
 
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 
 
 #modal .content {
@@ -181,7 +191,7 @@ footer a {
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 2%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -201,7 +211,8 @@ footer a {
 }
 
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
 
     padding: 12px;
@@ -249,26 +260,103 @@ form a:hover {
 }
 
 form button {
-    background: white;
-
     width: 150px;
     height: 40px;
+    background-color: #ffffff22;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
 
     border-radius: 6px;
 
-    cursor: pointer;
-
-    margin-top: 32px;
-
-    grid-column: 2;
-    justify-self: end;
-
-    transition: 400ms;
+    align-self: end;
 }
 
 form button:hover {
-    
+
     background-color: #0984e3;
     color: white;
     text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* IDEA.HTML */
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style-type: none;
+
+    margin-right: 16px;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li a.button{
+    color: white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+
+
+
+
+section#title {
+    text-align: center;
+
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
 }
