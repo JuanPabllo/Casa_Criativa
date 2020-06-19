@@ -259,22 +259,23 @@ form a:hover {
     text-decoration: none;
 }
 
-form button {
+form button{
+    color: white;
+    background-color: #ff5e84;
+
     width: 150px;
     height: 40px;
-    background-color: #ffffff22;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 14px;
-    font-weight: bold;
 
     border-radius: 6px;
 
-    align-self: end;
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+    justify-self: end;
+
+    transition: 400ms;
 }
 
 form button:hover {
