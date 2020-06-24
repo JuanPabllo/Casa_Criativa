@@ -1,0 +1,24 @@
+{
+  "name": "casa_criativa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanPablo192/Casa_Criativa.git"
+  },
+  "author": "JuanPablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanPablo192/Casa_Criativa/issues"
+  },
+  "homepage": "https://github.com/JuanPablo192/Casa_Criativa#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1",
+    "sqlite3": "^4.2.0"
+  }
+}
