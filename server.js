@@ -1,34 +1,30 @@
-// Criando e configurando o servidor
-
-const express = require('express')
+// criando e configurando o servidor
+const express = require("express")
 
 const server = express()
 const db = require("./db")
 
-
-// Arquivos estáticos
+//arquivos estáticos
 server.use(express.static("public"))
 
-// habilitar req.body
+//habilitar req.body
 server.use(express.urlencoded({
     extended: true
 }))
 
-// configurar nunjucks
+// configuração nunjucks
 const nunjucks = require("nunjucks")
-const {
-    get
-} = require('./db')
 
 nunjucks.configure("views", {
     express: server,
     noCache: true, //boolean
 })
-
 //rota, pedido e resposta
 server.get("/", function (req, res) {
+
     db.all(`SELECT * FROM ideas`, function (err, rows) {
         if (err) return console.log(err)
+
         const reversedIdeas = [...rows].reverse()
 
         let lastIdeas = []
@@ -37,6 +33,7 @@ server.get("/", function (req, res) {
                 lastIdeas.push(idea)
             }
         }
+
         return res.render("index.html", {
             ideas: lastIdeas
         })
@@ -47,30 +44,28 @@ server.get("/ideias", function (req, res) {
     db.all(`SELECT * FROM ideas`, function (err, rows) {
         if (err) {
             console.log(err)
-            return res.send("Error DataBase")
+            return res.send("Error database")
         }
-
         const reversedIdeas = [...rows].reverse()
 
         return res.render("ideias.html", {
             ideas: reversedIdeas.reverse()
         })
+
     })
 })
-
 
 server.post("/", function (req, res) {
     //inserir dados na tabela
     const query = `
-    INSERT INTO ideas(
-        image,
-        title,
-        category,
-        description,
-        link
-    ) VALUES (?,?,?,?,?)
-    `
-
+        INSERT INTO ideas(
+            image,
+            title,
+            category,
+            description,
+            link
+        ) VALUES (?,?,?,?,?);
+     `
     const values = [
         req.body.image,
         req.body.title,
@@ -78,18 +73,17 @@ server.post("/", function (req, res) {
         req.body.description,
         req.body.link,
     ]
-
     db.run(query, values, function (err) {
         if (err) {
             console.log(err)
-            return res.send("Error DataBase.")
+            return res.send("Error database.")
         }
+
         return res.redirect("/ideias")
     })
 })
 
 
 
-//Porta
-
+//porta 
 server.listen(3000)
