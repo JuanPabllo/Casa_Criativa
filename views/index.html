@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="imagem da logo">
+        </a>
+    </header>
+
+    <main>
+        <p>
+            Ficar em casa em periodos longos, não ddeve ser nada fácil
+        </p>
+        <p>
+            Iremos catalogar ideias, brincadeiras, jogos, filmes, livros, curso, dicas e tudo que for necessário para
+            tornar esse momento mais interessante.
+        </p>
+        <p>
+            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
+        </p>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar ideia</button>
+        <a href="/ideas" class="button">Ver ideias</a>
+    </section>
+
+    <footer>
+        with ☕ <a href="https://www.linkedin.com/in/juanpablodev/" target="_blank">Juan Pablo</a>
+    </footer>
+
+</section>
+<section id="last-ideias">
+    {% include "all_ideas.html %}
+</section>
+
+{% endblock %}
