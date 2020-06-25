@@ -2,38 +2,37 @@
 
 {% block content %}
 
-<section id="intro">
+<section id = "intro">
     <header>
         <a href="/">
-            <img src="/logo.png" alt="imagem da logo">
+            <img src="/logo.png" alt="Imagem Logo">
         </a>
     </header>
-
     <main>
         <p>
-            Ficar em casa em periodos longos, não ddeve ser nada fácil
+            Ficar em casa em períodos longos, não deve ser nada fácil.
         </p>
         <p>
-            Iremos catalogar ideias, brincadeiras, jogos, filmes, livros, curso, dicas e tudo que for necessário para
-            tornar esse momento mais interessante.
+            Iremos catalogar ideias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo que for necessário para tornar esse momento mais interessante.
         </p>
         <p>
-            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
+            Comece clicando em ver ideias para ver as  ideias cadastradas e contribua adicioando a sua ideia.
         </p>
-    </main>
+    
+    </main> 
 
     <section id="buttons">
-        <button onclick="onOff()">+ Adicionar ideia</button>
-        <a href="/ideas" class="button">Ver ideias</a>
+        <button onclick="onOff()">+ Adicionar ideia.</button>
+        <a href="/ideias" class="button">Ver Ideias</a>
     </section>
 
     <footer>
-        with ☕ <a href="https://www.linkedin.com/in/juanpablodev/" target="_blank">Juan Pablo</a>
+        With ☕ <a href="http://rocketseat.com.br" target="_blank">Juan Pablo</a>
     </footer>
 
 </section>
-<section id="last-ideias">
-    {% include "all_ideas.html %}
+    <section id="last-ideias">
+        {% include "all_ideas.html" %}
 </section>
 
 {% endblock %}
