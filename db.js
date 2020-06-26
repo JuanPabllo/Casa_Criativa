@@ -30,13 +30,13 @@ db.serialize(function() {
     //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure alias, repellat dolore perferendis ut ipsam adipisci corporis ab. Consectetur incidunt veniam alias soluta nulla vel commodi a iusto rerum sunt.",
     //     "https://rocketseat.com.br"
     // ]
-    
+
     // db.run(query, values, function(err){
     //      if (err) return console.log(err)
 
     //      console.log(this)
     // })
-    
+
     // Deletar dados da tabela
     // db.run(`DELETE FROM ideas WHERE id = ?`, [1], function(err){
     //     if (err) return console.log(err)
