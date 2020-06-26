@@ -42,9 +42,9 @@ npm install
 ```bash
 npm run dev
 ```
-<img src="public/home.PNG"/>
-<img src="public/ideias.PNG"/>
-<img src="public/modal.PNG"/>
+<img src="public/home.png"/>
+<img src="public/ideias.png"/>
+<img src="public/modal.png"/>
 
 ## :page_facing_up: License
 
